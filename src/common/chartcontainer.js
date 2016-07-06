@@ -1,9 +1,11 @@
 import React, {PropTypes} from 'react';
-import ChartBaseMixin from './mixins/chartbasemixin';
 
 const ChartContainer = React.createClass({
-
-	mixins: [ChartBaseMixin],
+	
+	propTypes: {
+		width: PropTypes.number,
+		height: PropTypes.number
+	},
 
 	render: function () {
 		return <svg width={this.props.width} height={this.props.height}>

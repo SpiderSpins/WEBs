@@ -1,6 +1,6 @@
 module.exports = {
-	entry: './index.js',
-	output: 'WEBs.js',
+	entry: {app: './index.js'},
+	output: {filename: 'WEBs.js'},
 	module: {
 		loaders: [
 			{

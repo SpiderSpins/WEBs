@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SpiderSpins/WEBs#readme",
   "dependencies": {
+    "d3": "^4.1.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0"
   },
