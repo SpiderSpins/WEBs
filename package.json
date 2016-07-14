@@ -28,7 +28,9 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-1": "^6.5.0",
     "babel-register": "^6.9.0",
+    "html-webpack-plugin": "^2.22.0",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "^4.8.0"
   }
 }

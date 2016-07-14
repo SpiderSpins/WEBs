@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-export default class extends Component {
+const Bar = class extends Component {
 
 	static propTypes = {
 		x: PropTypes.number,
@@ -10,9 +10,11 @@ export default class extends Component {
 		fill: PropTypes.string,
 		className: PropTypes.string,
 		style: PropTypes.object
-	}
+	};
 
 	render() {
 		return <rect {...this.props}></rect>;
 	}
 };
+
+export default Bar;
