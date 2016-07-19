@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-const Bars = class extends Component {
+export default class extends Component {
 
 	static propTypes = {
 		data: PropTypes.array.isRequired,
@@ -29,5 +29,3 @@ const Bars = class extends Component {
 		</g>;
 	}
 };
-
-export default Bars;
