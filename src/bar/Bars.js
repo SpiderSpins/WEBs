@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Bar from './Bar';
 
 export default class extends Component {
 
@@ -6,7 +7,8 @@ export default class extends Component {
 		data: PropTypes.array.isRequired,
 		width: PropTypes.number.isRequired,
 		height: PropTypes.number.isRequired,
-		padding: PropTypes.number
+		xScale: PropTypes.func.isRequired,
+		yScale: PropTypes.func.isRequired
 	};
 
 	static defaultProps = {
@@ -19,11 +21,16 @@ export default class extends Component {
 
 	render() {
 		const {xScale, yScale} = this.props;
+		const barWidth = xScale.bandwidth();
 
 		return <g>
 			{
 				this.props.data.map((d,i) => {
-					return <Bar x={} y={} width={xScale.rangeBand()} height={}/>
+					return <Bar key={i}
+								x={xScale(d.name)} 
+								y={yScale(d.value)} 
+								width={barWidth} 
+								height={this.props.height - yScale(d.value)}/>
 				})
 			}
 		</g>;

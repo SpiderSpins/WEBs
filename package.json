@@ -2,9 +2,9 @@
   "name": "webs",
   "version": "0.0.1",
   "description": "A Charting library built using ReactJS and D3",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "opener http://localhost:8080/index.html && webpack-dev-server --config webpack.dev.config.babel.js --content-base test/dev --inline --hot",
+    "build": "rimraf dist && webpack && webpack -p"
   },
   "repository": {
     "type": "git",
